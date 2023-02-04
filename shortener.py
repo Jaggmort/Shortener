@@ -38,7 +38,7 @@ if __name__ == "__main__":
     parser.add_argument('url', help='ссылка bit.ly или ссылка для сокращения')
     args = parser.parse_args()
     start_url = args.url
-    bitly_token = os.environ['TOKEN']
+    bitly_token = os.environ['BITLY_TOKEN']
     #start_url = input('input your url: ')
     if is_bitlink(bitly_token, start_url):
         try:
