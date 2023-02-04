@@ -17,11 +17,11 @@
 ### Примеры работы: ###
 
 ```
-PS R:\Work_py\Less\Weather> python shortener.py http://google.com
+python shortener.py http://google.com
 Битлинк bit.ly/40caYpi
 ```
 ```
-PS R:\Work_py\Less\Weather> python shorter.py bit.ly/40caYpi   
+python shortener.py bit.ly/40caYpi   
 Количество кликов 0
 ```
 
