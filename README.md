@@ -14,6 +14,17 @@
 
 Для работы необходимо вставить ваш токен, полученный в bit.ly, в переменную TOKEN в файле .env
 
+### Примеры работы: ###
+
+```
+PS R:\Work_py\Less\Weather> python shortener.py http://google.com
+Битлинк bit.ly/40caYpi
+```
+```
+PS R:\Work_py\Less\Weather> python shorter.py bit.ly/40caYpi   
+Количество кликов 0
+```
+
 ### Цель проекта ###
 
 Образовательный проект.
