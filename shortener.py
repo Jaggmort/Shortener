@@ -17,8 +17,8 @@ def shorten_link(bitly_token, url):
 def count_clicks(bitly_token, url):
     bitly_headers = {'Authorization': 'Bearer {}'.format(bitly_token)}
     parsed_url = urlparse(url)
-    link = ('https://api-ssl.bitly.com/v4/bitlinks/{}{}/clicks/summary'.format(
-            parsed_url.netloc, parsed_url.path))
+    link = 'https://api-ssl.bitly.com/v4/bitlinks/{}{}/clicks/summary'.format(
+            parsed_url.netloc, parsed_url.path)
     response = requests.get(link, headers=bitly_headers)
     response.raise_for_status()
     return response.json()['total_clicks']
@@ -27,8 +27,8 @@ def count_clicks(bitly_token, url):
 def is_bitlink(bitly_token, url):
     bitly_headers = {'Authorization': 'Bearer {}'.format(bitly_token)}
     parsed_url = urlparse(url)
-    check_link = ('https://api-ssl.bitly.com/v4/bitlinks/{}{}'.format(
-        parsed_url.netloc, parsed_url.path))
+    check_link = 'https://api-ssl.bitly.com/v4/bitlinks/{}{}'.format(
+        parsed_url.netloc, parsed_url.path)
     return requests.get(check_link, headers=bitly_headers).ok
 
 
